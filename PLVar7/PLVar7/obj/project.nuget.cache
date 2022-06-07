@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "dgSpecHash": "xR1oLlVi3UzSmF6M9zYByn8embAYttFLnTeShWa+Vcu4Crh5DBjyNRR/STAdKv7GVw02HVtYdDlP5rgy8pfHMw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Dice1\\Downloads\\Telegram Desktop\\ElectronicLibrary\\ElectronicLibrary\\PLVar7\\PLVar7\\PLVar7.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Не удалось найти пакет AutoMapper. Пакеты с таким идентификатором отсутствуют в следующих источниках пакетов: Microsoft Visual Studio Offline Packages",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Не удалось найти пакет Microsoft.EntityFrameworkCore. Пакеты с таким идентификатором отсутствуют в следующих источниках пакетов: Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Не удалось найти пакет Microsoft.EntityFrameworkCore.SqlServer. Пакеты с таким идентификатором отсутствуют в следующих источниках пакетов: Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

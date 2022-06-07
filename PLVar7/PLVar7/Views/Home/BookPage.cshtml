@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Book Page";
+}
+<div class="book-information">
+    <div>
+        <p class="info">
+            Title: @ViewBag.Book.Title<br />
+            Genre: @ViewBag.Book.Genre<br />
+            Type: @ViewBag.Book.Type<br />
+        </p>
+    </div>
+
+    <a href="~/Home/ReserveBook/@ViewBag.Book.BookId">
+        <button class="button">Reserve book</button>
+    </a>
+</div>

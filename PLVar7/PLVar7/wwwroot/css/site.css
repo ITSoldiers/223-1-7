@@ -1,0 +1,261 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #ba7232;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding-top: 15px;
+}
+
+#box {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    justify-content: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    padding-left: 15px;
+}
+
+.hottour {
+    transition: background .3s;
+    --borderWidth: 3px;
+    background: #cfa1a1;
+    position: relative;
+    border-radius: var(--borderWidth);
+    margin-top: 10px;
+}
+
+.book {
+    transition: background .3s;
+    --borderWidth: 3px;
+    background: #ebb381;
+    position: relative;
+    border-radius: var(--borderWidth);
+    margin-top: 10px;
+}
+
+.button {
+    width: 270px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-top: 7px;
+}
+
+    .button:hover {
+        background-color: #ccc;
+        box-shadow: 0px 15px 20px rgba(116, 203, 214, 0.4);
+        color: #fff;
+        transform: translateY(-3px);
+    }
+
+.book:hover {
+    background: #c4956a;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+}
+
+.option {
+    padding: 0 30px 0 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    background: #ccc;
+    border-top: #222 solid 1px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    order: 2;
+    z-index: 1;
+    transition: background .4s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+    .option:hover {
+        background-color: aliceblue;
+    }
+
+.select:focus .option {
+    position: relative;
+    pointer-events: all;
+}
+
+.selectopt {
+    opacity: 0;
+    position: absolute;
+    left: -99999px;
+}
+
+    .selectopt:checked + label {
+        order: 1;
+        z-index: 2;
+        background: #ccc;
+        border-top: none;
+        position: relative;
+    }
+
+        .selectopt:checked + label:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid white;
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 2.5px);
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .selectopt:checked + label:before {
+            position: absolute;
+            right: 0;
+            height: 40px;
+            width: 40px;
+            content: '';
+            background: #ccc;
+        }
+
+.icon {
+    height: 60px;
+    width: 60px;
+    margin-right: 5px;
+    padding: 2px;
+    margin-bottom: 8px;
+}
+
+.masonry-layout {
+    column-count: 1;
+    column-gap: 0;
+}
+
+.masonry-layout__panel {
+    break-inside: avoid;
+    padding: 5px;
+}
+
+.masonry-layout__panel-content {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.info {
+    font-size: 35px;
+    color: #fff;
+}
+
+label {
+    font-size: 16px;
+    color: white;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.navbar-home {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    color: white;
+}
+
+.navbar-item {
+    color: white;
+}
+
+.text-center {
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+
+.main-container {
+    width: 1310px;
+    margin: 0 auto;
+    background: darkgray;
+    height: 100%;
+}
+
+.bblock {
+    float: right;
+    font-size: 20px;
+    width: 630px; /*Фиксируем ширину блока*/
+    margin-right: 10px;
+}
+
+.main-container :last-child {
+    margin-right: 0px; /*Убираем поле последнего div-а*/
+}
+
+.filter{
+    width: 300px;
+}
+
+.books{
+    width: 76%;
+}
+
+.delete{
+    margin-left: 580px;
+}

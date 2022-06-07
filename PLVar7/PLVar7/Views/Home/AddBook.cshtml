@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Add book";
+}
+
+<form method="post" action="~/Home/Add/">
+            <label for="genre">Genre: </label>
+            <input type="text" placeholder="Genre" name="genre" required>
+            <br />
+
+            <label for="typeBook">Type: </label>
+            <input type="text" placeholder="Type" name="bookType" required>
+            <br />
+
+            <label for="bookTitle">Book title:</label>
+            <input type="text" placeholder="Book title" name="bookTitle" required>
+            <br />
+
+            <label for="author">Author:</label>
+            <input type="text" placeholder="Author" name="author" required>
+            <br />
+
+            <button type="submit" class="button">Add</button>
+    </form>

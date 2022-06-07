@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul class="navbar-home">
+    @if (@ViewBag.User.Login is not null)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Add">Add book</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Delete">Delete book</a>
+        </li>
+    }
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registration">Register</a>
+    </li>
+    @if (@ViewBag.User.Login is null)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LogIn">Log in</a>
+        </li>
+    }
+    else{
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LogOut">Log out</a>
+        </li>
+    }
+</ul>
+
+<div class="main-container">
+    <div class="bblock filter">
+        <form method="get" action="~/Home/Find/">
+        <div class="container">
+            <label for="genre">Genre: </label>
+            <select class="custom-select" name="genre" required>
+                <option selected disabled>Choose a genre: </option>
+                 @for(int i = 0; i < @ViewBag.Genres.Count; i++)
+                {
+                   <option value=@ViewBag.Genres[i]>@ViewBag.Genres[i]</option>
+                }
+            </select>
+
+            <label for="bookType">Type: </label>
+            <select class="custom-select" name="bookType" required>
+                <option selected disabled>Choose a type: </option>
+                @for(int i = 0; i < @ViewBag.Types.Count; i++)
+                {
+                   <option value=@ViewBag.Types[i]>@ViewBag.Types[i]</option>
+                }
+            </select>
+
+            <button type="submit" class="button">Find</button>
+        </div>
+    </form>
+    </div>
+    <div class="bblock books">
+        @foreach (var item in @ViewBag.Books)
+        {
+            <div class="masonry-layout__panel">
+                <div class="masonry-layout__panel-content">
+                    <a href="~/Home/Book/@item.BookId">
+                        <div class="book" id="box">
+                            <div class="content">Title: @item.Title Genre: @item.Genre Type: @item.Type</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
